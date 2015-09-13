@@ -1,0 +1,251 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E62FAE741BA5E42D008D18BA /* PYTabScrollBar.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E62FAE731BA5E42D008D18BA /* PYTabScrollBar.h */; };
+		E62FAE761BA5E42D008D18BA /* PYTabScrollBar.m in Sources */ = {isa = PBXBuildFile; fileRef = E62FAE751BA5E42D008D18BA /* PYTabScrollBar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E62FAE6E1BA5E42D008D18BA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				E62FAE741BA5E42D008D18BA /* PYTabScrollBar.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E62FAE701BA5E42D008D18BA /* libPYTabScrollBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPYTabScrollBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62FAE731BA5E42D008D18BA /* PYTabScrollBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYTabScrollBar.h; sourceTree = "<group>"; };
+		E62FAE751BA5E42D008D18BA /* PYTabScrollBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PYTabScrollBar.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E62FAE6D1BA5E42D008D18BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E62FAE671BA5E42D008D18BA = {
+			isa = PBXGroup;
+			children = (
+				E62FAE721BA5E42D008D18BA /* PYTabScrollBar */,
+				E62FAE711BA5E42D008D18BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E62FAE711BA5E42D008D18BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E62FAE701BA5E42D008D18BA /* libPYTabScrollBar.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E62FAE721BA5E42D008D18BA /* PYTabScrollBar */ = {
+			isa = PBXGroup;
+			children = (
+				E62FAE731BA5E42D008D18BA /* PYTabScrollBar.h */,
+				E62FAE751BA5E42D008D18BA /* PYTabScrollBar.m */,
+			);
+			path = PYTabScrollBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E62FAE6F1BA5E42D008D18BA /* PYTabScrollBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E62FAE841BA5E42D008D18BA /* Build configuration list for PBXNativeTarget "PYTabScrollBar" */;
+			buildPhases = (
+				E62FAE6C1BA5E42D008D18BA /* Sources */,
+				E62FAE6D1BA5E42D008D18BA /* Frameworks */,
+				E62FAE6E1BA5E42D008D18BA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PYTabScrollBar;
+			productName = PYTabScrollBar;
+			productReference = E62FAE701BA5E42D008D18BA /* libPYTabScrollBar.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E62FAE681BA5E42D008D18BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = PushLab;
+				TargetAttributes = {
+					E62FAE6F1BA5E42D008D18BA = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = E62FAE6B1BA5E42D008D18BA /* Build configuration list for PBXProject "PYTabScrollBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E62FAE671BA5E42D008D18BA;
+			productRefGroup = E62FAE711BA5E42D008D18BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E62FAE6F1BA5E42D008D18BA /* PYTabScrollBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E62FAE6C1BA5E42D008D18BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E62FAE761BA5E42D008D18BA /* PYTabScrollBar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		E62FAE821BA5E42D008D18BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E62FAE831BA5E42D008D18BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E62FAE851BA5E42D008D18BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E62FAE861BA5E42D008D18BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E62FAE6B1BA5E42D008D18BA /* Build configuration list for PBXProject "PYTabScrollBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E62FAE821BA5E42D008D18BA /* Debug */,
+				E62FAE831BA5E42D008D18BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E62FAE841BA5E42D008D18BA /* Build configuration list for PBXNativeTarget "PYTabScrollBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E62FAE851BA5E42D008D18BA /* Debug */,
+				E62FAE861BA5E42D008D18BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E62FAE681BA5E42D008D18BA /* Project object */;
+}
