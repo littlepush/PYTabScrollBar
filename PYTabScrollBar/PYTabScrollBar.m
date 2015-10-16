@@ -66,8 +66,8 @@
     
     _rightView = rightView;
     [self addSubview:_rightView];
-    [_leftView setCenter:CGPointMake(_rightView.bounds.size.width / 2,
-                                     self.bounds.size.height / 2)];
+    [_rightView setCenter:CGPointMake(_rightView.bounds.size.width / 2,
+                                      self.bounds.size.height / 2)];
     
     [self setNeedsLayout];
     
@@ -118,7 +118,20 @@
 {
     [super layoutSubviews];
     
+    // Set the tab container's frame
+    CGFloat _tabHeight = self.bounds.size.height;
+    CGFloat _tabContainerWidth = self.bounds.size.width;
+    _tabContainerWidth -= ( _leftView ? _leftView.bounds.size.width : 0 );
+    _tabContainerWidth -= ( _rightView ? _rightView.bounds.size.width : 0 );
+    CGRect _tabContainerFrame = CGRectMake((_leftView ? _leftView.bounds.size.width : 0),
+                                           0, _tabContainerWidth, _tabHeight);
+    [_tabContainer setFrame:_tabContainerFrame];
+    
     // Re-layout all opened tabs
+    CGFloat _avgWidth = MAX(MIN(_tabContainerWidth / _tabPool.count, _maxTabWidth), _minTabWidth);
+    for ( NSInteger _idx = 0; _idx < _tabPool.count; ++_idx ) {
+        [_tabPool[_idx] setFrame:CGRectMake(_idx * _avgWidth, 0, _avgWidth, _tabHeight)];
+    }
 }
 
 - (id)init
@@ -137,6 +150,46 @@
         [self _initialize_tabbar];
     }
     return self;
+}
+
+- (void)setBounds:(CGRect)bounds
+{
+    [super setBounds:bounds];
+    if ( _leftView ) {
+        [_leftView setCenter:CGPointMake(_leftView.bounds.size.width / 2,
+                                         self.bounds.size.height / 2)];
+    }
+    if ( _rightView ) {
+        [_rightView setCenter:CGPointMake(_rightView.bounds.size.width / 2,
+                                          self.bounds.size.height / 2)];
+    }
+    [self setNeedsLayout];
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    if ( _leftView ) {
+        [_leftView setCenter:CGPointMake(_leftView.bounds.size.width / 2,
+                                         self.bounds.size.height / 2)];
+    }
+    if ( _rightView ) {
+        [_rightView setCenter:CGPointMake(_rightView.bounds.size.width / 2,
+                                          self.bounds.size.height / 2)];
+    }
+    [self setNeedsLayout];
+}
+
+- (void)appendTabViewWithContent:(id)content
+{
+    if ( self.delegate &&
+        [self.delegate respondsToSelector:@selector(tabScrollBar:createNewTabWithContent:)] ) {
+        UIView *_tabView = [self.delegate tabScrollBar:self createNewTabWithContent:content];
+        if ( _tabView == nil ) return;
+        [_tabPool addObject:_tabView];
+        [_tabContainer addSubview:_tabView];
+        [self setNeedsLayout];
+    }
 }
 
 @end

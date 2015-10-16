@@ -9,7 +9,15 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+// The delegate for tab scroll bar.
+@protocol PYTabScrollBarDelegate;
+
 @interface PYTabScrollBar : UIView
+
+/*!
+ @brief the delegate object
+ */
+@property (nonatomic, assign)   id<PYTabScrollBarDelegate>  delegate;
 
 /*!
  @brief all tab views in the container.
@@ -41,5 +49,21 @@
  @brief the right side customized view
  */
 @property (nonatomic, strong)   UIView              *rightView;
+
+/*!
+ @brief create a new tab view with the content.
+ */
+- (void)appendTabViewWithContent:(id)content;
+
+@end
+
+@protocol PYTabScrollBarDelegate <NSObject>
+
+@required
+
+/*!
+ @brief Create a new tabbar with specified content
+ */
+- (id)tabScrollBar:(PYTabScrollBar *)tabScrollBar createNewTabWithContent:(id)content;
 
 @end
